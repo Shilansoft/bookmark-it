@@ -3,39 +3,34 @@
   "version": "1.0.0",
   "main": "index.js",
   "description": "",
-  "scripts": {
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "dev": "env-path -p .env.development nodemon --inspect=0.0.0.0 --require @babel/register server.js",
-    "start": "env-path -p .env nodemon --exec babel-node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shilansoft/bookmark-it.git"
   },
   "keywords": [],
   "author": "Shilansoft",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shilansoft/bookmark-it/issues"
   },
   "homepage": "https://github.com/Shilansoft/bookmark-it#readme",
+  "scripts": {
+    "dev": "env-path -p .env.development nodemon --inspect=0.0.0.0 --require @babel/register server.js",
+    "start": "env-path -p .env nodemon --exec babel-node server.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
-    "concurrently": "^5.0.2",
     "dotenv": "^8.2.0",
     "env-path": "^1.0.7",
-    "husky": "^3.1.0",
     "nodemon": "^2.0.2"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "npm-run-all": "^4.1.5"
+    "morgan": "^1.9.1"
   }
 }

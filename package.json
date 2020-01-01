@@ -1,0 +1,25 @@
+{
+  "name": "bookmark-it",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shilansoft/bookmark-it.git"
+  },
+  "keywords": [],
+  "author": "Shilansoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shilansoft/bookmark-it/issues"
+  },
+  "homepage": "https://github.com/Shilansoft/bookmark-it#readme",
+  "scripts": {
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
+    "run": "cd ./server",
+    "dev": "yarn run && yarn dev",
+    "start": "yarn run && yarn start"
+  }
+}
