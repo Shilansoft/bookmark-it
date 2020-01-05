@@ -18,8 +18,7 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
-    "run": "cd ./server",
-    "dev": "yarn run && yarn dev",
-    "start": "yarn run && yarn start"
+    "dev": "yarn --cwd ./server dev",
+    "start": "yarn --cwd ./server start"
   }
 }
