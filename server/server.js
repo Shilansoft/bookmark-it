@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import colors from "colors"
+import colors from "colors";
 
 import { app } from "./app";
 import { config } from "./config";
@@ -9,7 +9,7 @@ app.listen(config.port, () => {
   console.log(
     `🚀  Server running in ${config.env} mode on port ${config.port}`.yellow
       .bold,
-  )
+  );
 });
 
 // Handle unhandled promise rejection
