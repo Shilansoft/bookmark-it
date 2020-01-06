@@ -1,16 +1,21 @@
 import * as dotenv from "dotenv";
+import { importData } from "./seeder";
 import colors from "colors";
-
 import connectDB from "./utils/connectDB";
 
 import { app } from "./app";
 import { config } from "./config";
-dotenv.config();
 
 // Load env vars
-dotenv.config({ path: ".env" });
+dotenv.config();
+
 // Connect to database
 connectDB();
+
+if (config.env === "development") {
+  // Seed data
+  importData();
+}
 
 app.listen(config.port, () => {
   console.log(
