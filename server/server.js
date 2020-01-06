@@ -1,9 +1,16 @@
 import * as dotenv from "dotenv";
 import colors from "colors";
 
+import connectDB from "./utils/connectDB";
+
 import { app } from "./app";
 import { config } from "./config";
 dotenv.config();
+
+// Load env vars
+dotenv.config({ path: ".env" });
+// Connect to database
+connectDB();
 
 app.listen(config.port, () => {
   console.log(
