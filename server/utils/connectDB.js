@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { config } from "../config";
 
 const connection = {};
 
@@ -8,7 +9,7 @@ const connectDB = async () => {
     return;
   }
 
-  const db = await mongoose.connect(process.env.MONGO_URI, {
+  const db = await mongoose.connect(config.mongoUri, {
     useCreateIndex: true,
     useFindAndModify: false,
     useNewUrlParser: true,

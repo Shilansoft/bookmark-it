@@ -31,4 +31,10 @@ const LinkSchema = new mongoose.Schema({
   },
 });
 
+LinkSchema.pre("save", (next) => {
+  // TODO: Some stuff to be added here later on
+
+  next();
+});
+
 export default mongoose.model("Link", LinkSchema) || mongoose.models.Link;
