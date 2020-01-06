@@ -20,5 +20,8 @@
     "check-format": "yarn prettier --list-different",
     "dev": "yarn --cwd ./server dev",
     "start": "yarn --cwd ./server start"
+  },
+  "devDependencies": {
+    "husky": "^3.1.0"
   }
 }
