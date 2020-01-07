@@ -29,7 +29,9 @@ export const getLink = async (req, res, next) => {
 // @access  Private
 export const getLinks = async (req, res, next) => {
   try {
-    const links = await Link.find();
+    const links = await Link.find()
+      .populate("tags", "name")
+      .populate("category", "name");
     if (!links) {
       res.status(400).json({
         success: false,

@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const CategorySchema = new mongoose.Schema({
-  title: {
+  name: {
     type: String,
-    required: [true, "Please add a title"],
+    required: [true, "Please add a name"],
     trim: true,
-    maxlength: [50, "Title can not be more than 50 characters"],
+    maxlength: [50, "Name can not be more than 50 characters"],
   },
   createdAt: {
     type: Date,

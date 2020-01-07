@@ -25,6 +25,8 @@ const LinkSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  category: { type: mongoose.Schema.Types.ObjectId, ref: "Category" },
+  tags: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tag" }],
   createdAt: {
     type: Date,
     default: Date.now,
