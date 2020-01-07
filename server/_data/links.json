@@ -6,8 +6,8 @@
     "description": "Effects are a part of your data flow.",
     "fav": false,
     "trash": false,
-    "tags": "",
-    "category": "5d725a037b292f5f8ceff787",
+    "tags": [],
+    "category": null,
     "user": "5d7a514b5d2c12c7449be045"
   },
   {
@@ -17,8 +17,8 @@
     "description": "Today we will be covering a few popular methods to style our React JS applications such as Styled Components and Sass to explain the benefits of both.",
     "fav": false,
     "trash": false,
-    "tags": "",
-    "category": "5d725a037b292f5f8ceff787",
+    "tags": [],
+    "category": null,
     "user": "5d7a514b5d2c12c7449be045"
   }
 ]
