@@ -25,8 +25,15 @@ const data = links.map((link) => ({
 // Import into DB
 export const importData = async () => {
   try {
-    await Category.create(categories);
-    await Tag.create(tags);
+    const categoryRows = await Category.find();
+    if (!categoryRows || categoryRows.categoryRows === 0) {
+      await Category.create(categories);
+    }
+
+    const tagRows = await Tag.find();
+    if (!tagRows || tagRows.tagRows === 0) {
+      await Tag.create(tags);
+    }
 
     const rows = await Link.find();
     if (!rows || rows.length === 0) {
