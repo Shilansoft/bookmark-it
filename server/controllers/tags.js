@@ -1,4 +1,4 @@
-import Link from "../models/Tag";
+import Tag from "../models/Tag";
 
 // ─── GET TAGS ─────────────────────────────────────────────────────────────
 // @desc    Get all tag
